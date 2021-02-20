@@ -36,6 +36,13 @@ namespace TaskDateCalculator
                 hoursToAdd = hoursToAdd % 8;
             }
 
+            // This is to make sure  that if we start at 8 AM and adding only days that we finish at 5 PM instead of 8 AM of next day
+            if ((startDate.Hour == 8 && startDate.Minute == 0) && (daysToAdd > 0 && hoursToAdd == 0 && minutesToAdd == 0))
+            {
+                hoursToAdd = 8;
+                daysToAdd--;
+            }
+
             // Add days skipping weekends and holidays
             while (daysToAdd != 0)
             {
@@ -49,11 +56,11 @@ namespace TaskDateCalculator
             {
                 startDate = startDate.AddHours(1);
                 hoursToAdd--;
-                if (startDate.Hour == 12)
+                if ((startDate.Hour == 12 && startDate.Minute != 0) || (startDate.Hour == 12 && hoursToAdd != 0))
                 {
-                    startDate.AddHours(1);
+                    startDate = startDate.AddHours(1);
                 }
-                else if (startDate.Hour > 17)
+                else if (startDate.Hour > 17 || (startDate.Hour == 17 && startDate.Minute > 0))
                 {
                     minutesToAdd += startDate.Minute;
                     startDate = GetNextValidDateTime(startDate, Holidays);
@@ -70,11 +77,11 @@ namespace TaskDateCalculator
             {
                 startDate = startDate.AddMinutes(minutesToAdd);
                 minutesToAdd = 0;
-                if (startDate.Hour == 12)
+                if ((startDate.Hour == 12 && startDate.Minute != 0) || (startDate.Hour == 12 && minutesToAdd != 0))
                 {
-                    startDate.AddHours(1);
+                    startDate = startDate.AddHours(1);
                 }
-                else if (startDate.Hour > 17)
+                else if (startDate.Hour > 17 || (startDate.Hour == 17 && startDate.Minute > 0))
                 {
                     minutesToAdd += startDate.Minute;
                     startDate = GetNextValidDateTime(startDate, Holidays);
