@@ -103,7 +103,7 @@ namespace TaskDateCalculator
             {
                 start = new DateTime(start.Year, start.Month, start.Day, 8, 0, 0);
             }
-            else if (start.Hour > 17)
+            else if (start.Hour > 17 || (start.Hour == 17 && start.Minute > 0))
             {
                 start = start.AddDays(1);
                 start = new DateTime(start.Year, start.Month, start.Day, 8, 0, 0);

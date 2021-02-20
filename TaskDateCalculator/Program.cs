@@ -38,6 +38,20 @@ namespace TaskDateCalculator
             Console.WriteLine($"End Date: {FormatDate(endDate3)}");
             Console.WriteLine("-------------------------");
 
+            DateTime testStartDate4 = new DateTime(2018, 8, 21, 11, 30, 0);
+            int testMinutes4 = 30;
+            DateTime endDate4 = taskManager.GetEndDate(testStartDate4, testMinutes4);
+            Console.WriteLine($"Test 4: Start Date - {FormatDate(testStartDate4)}, Minutes - {testMinutes4}");
+            Console.WriteLine($"End Date: {FormatDate(endDate4)}");
+            Console.WriteLine("-------------------------");
+
+            DateTime testStartDate5 = new DateTime(2018, 12, 31, 16, 30, 0);
+            int testMinutes5 = 31;
+            DateTime endDate5 = taskManager.GetEndDate(testStartDate5, testMinutes5);
+            Console.WriteLine($"Test 4: Start Date - {FormatDate(testStartDate5)}, Minutes - {testMinutes5}");
+            Console.WriteLine($"End Date: {FormatDate(endDate5)}");
+            Console.WriteLine("-------------------------");
+
             Console.ReadKey();
         }
 
