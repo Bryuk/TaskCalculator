@@ -1,0 +1,7 @@
+C:\Users\alex.chakhau\source\repos\TaskDateCalculator\TaskDateCalculator\obj\Debug\TaskDateCalculator.csprojAssemblyReference.cache
+C:\Users\alex.chakhau\source\repos\TaskDateCalculator\TaskDateCalculator\obj\Debug\TaskDateCalculator.csproj.CoreCompileInputs.cache
+C:\Users\alex.chakhau\source\repos\TaskDateCalculator\TaskDateCalculator\bin\Debug\TaskDateCalculator.exe.config
+C:\Users\alex.chakhau\source\repos\TaskDateCalculator\TaskDateCalculator\bin\Debug\TaskDateCalculator.exe
+C:\Users\alex.chakhau\source\repos\TaskDateCalculator\TaskDateCalculator\bin\Debug\TaskDateCalculator.pdb
+C:\Users\alex.chakhau\source\repos\TaskDateCalculator\TaskDateCalculator\obj\Debug\TaskDateCalculator.exe
+C:\Users\alex.chakhau\source\repos\TaskDateCalculator\TaskDateCalculator\obj\Debug\TaskDateCalculator.pdb
